@@ -25,3 +25,4 @@
 - Авторизация
 
 ### Ссылка на проект:
+https://thakohov.github.io/react-mesto-auth/
