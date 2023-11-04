@@ -198,7 +198,7 @@ const App = () => {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <Routes>
-          <Route path="/" element={ loggedIn ? (<Navigate to="/main" replace />) : (<Navigate to="/signin" replace />)} />
+          <Route exact path="/" element={ loggedIn ? (<Navigate to="/main" replace />) : (<Navigate to="/signin" replace />)} />
           <Route path="/signup" element={
               <>
                 <Header title="Войти" route="/signin" />
