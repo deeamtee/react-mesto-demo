@@ -1,0 +1,13 @@
+.card__heart {
+  width: 22px;
+  height: 19px;
+  transition: 0.3s;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card__heart:hover {
+  opacity: 0.5;
+}

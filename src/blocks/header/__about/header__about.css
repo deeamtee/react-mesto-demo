@@ -1,0 +1,21 @@
+.header__about {
+  color: #a9a9a9;
+  display: flex;
+  column-gap: 24px;
+  margin: 10px 0 0 0;
+  height: fit-content;
+}
+
+@media screen and (max-width: 767px) {
+  .header__about {
+    flex-direction: column;
+    margin-right: 30px;
+    row-gap: 9px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .header__about:hover {
+    opacity: .5;
+  }
+}
