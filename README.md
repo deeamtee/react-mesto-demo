@@ -1,7 +1,3 @@
----
-permalink: /index.html
----
-
 # mesto-react-auth
 Фронтенд проекта Mesto на React.
 
