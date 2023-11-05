@@ -1,15 +1,17 @@
 import React from "react";
-import unionSuccess from "../images/Union-success.svg";
-import unionFail from "../images/Union-fail.svg";
 
-function InfoTooltip() {
+function InfoTooltip({ onClose, isOpen, img, title }) {
   return (
     <>
-      <div className="popup popup_opened">
+      <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
         <div className="popup__container popup__container_type_union">
-        <button className="popup__close" type="button"></button>
-          <img src={unionFail} alt="success" className="popup__image popup__union" />
-            <p className="popup__success-text">Что-то пошло не так! Попробуйте ещё раз.</p>            
+          <button
+            className="popup__close"
+            type="button"
+            onClick={onClose}
+          ></button>
+          <img src={img} alt={title} className="popup__image popup__union" />
+          <p className="popup__success-text">{title}</p>
         </div>
       </div>
     </>
