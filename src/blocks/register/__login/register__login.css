@@ -1,9 +1,11 @@
 .register__login {
-    cursor: pointer;
-    margin: 0;
-    transition: 1s;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  transition: 1s;
+  text-decoration-line: none;
 }
 
 .register__login:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }

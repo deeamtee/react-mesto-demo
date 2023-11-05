@@ -1,17 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import headerLogo from "../images/logo-header.svg";
-import headerLine from "../images/Line.svg"
+import headerLine from "../images/Line.svg";
 
-function Header({ text }) {
+function Header({ email, onSignOut, route, title }) {
   return (
     <header className="header">
       <img src={headerLogo} alt="Место" className="header__logo" />
       <div className="header__about">
-        <p className="header__mail">email@mail.com</p>
-        <p className="header__nav">{text}</p>
-        <img src={headerLine} alt="line" className="header__line" />
-        <img src={headerLine} alt="line" className="header__line" />
-        <img src={headerLine} alt="line" className="header__line" />
+        <p className="header__nav">{email}</p>
+        <Link
+          to={route}
+          onClick={onSignOut}
+          className="header__nav header__nav_type_hover header__nav_type_cursor"
+        >
+          {title}
+        </Link>
       </div>
     </header>
   );
