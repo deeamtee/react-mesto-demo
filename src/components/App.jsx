@@ -193,6 +193,7 @@ const App = () => {
         console.log(err);
       });
   };
+  console.log('v.2')
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
