@@ -65,7 +65,7 @@ const App = () => {
           setLoggedIn(true);
           setEmail(data.data.email);
           setUserData(userData);
-          navigate("/main", { replace: true });
+          navigate("/", { replace: true });
         }
       });
     }
@@ -100,7 +100,7 @@ const App = () => {
         localStorage.setItem("jwt", res.token);
         setEmail(email);
         setLoggedIn(true);
-        navigate("/main", { replace: true });
+        navigate("/", { replace: true });
       })
       .catch(() => {
         setInfoToolTipImage(unionFail);
@@ -193,12 +193,11 @@ const App = () => {
         console.log(err);
       });
   };
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <Routes>
-          <Route path="/" element={ loggedIn ? (<Navigate to="/main" replace />) : (<Navigate to="/signin" replace />)} />
+         
           <Route path="/signup" element={
               <>
                 <Header title="Войти" route="/signin" />
@@ -207,7 +206,7 @@ const App = () => {
             }
           />
           <Route path="/signin" element={ <> <Header title="Регистрация" route="/signup" /> <Login onLogin={handleLogin} /> </>}/>
-          <Route path="/main" element={<> <Header title="Выйти" route="/signin" onSignOut={signOut} email={email}/>
+          <Route path="/" element={<> <Header title="Выйти" route="/signin" onSignOut={signOut} email={email}/>
                 <ProtectedRouteElement
                   element={Main}
                   loggedIn={loggedIn}
